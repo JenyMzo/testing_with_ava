@@ -82,7 +82,7 @@ module.exports = function isFridayTheThirteen(day) {
 ```
 -----
 
-# Pass this on
+## Pass this on
 
 It's more funny writing code than testing code... :) 
 
