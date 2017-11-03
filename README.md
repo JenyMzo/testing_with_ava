@@ -199,6 +199,39 @@ module.exports = function pizzaMaker = (n, cb) => {
   return cb('error');
 };
 ```
+-----
+## Looking for creatures
+
+Write a test for a promise `lookingForCreatures()`, that verifies that promise is resolving with a `unicorn 🦄.`
+
+When you are going to test if a promise is resolving you can do the following:
+
+```js
+test('Looking for creatures', t => {
+	return anyPromise().then(res => {
+		t.is(result, expected);
+	});
+});
+```
+
+Also there are another assertions to test promises
+
+```js
+.throws(promise, [error, [message]]) //Assert that `function` throws an error, or `promise` rejects with an error.
+.notThrows(promise, [message]) //Assert that `function` does not throw an error or that `promise` does not reject with an error.
+```
+
+**Function**
+```js
+const lookingForCreatures = function lookingForCreatures() {
+    return new Promise((resolve, reject) => {
+        setTimeout(function(){
+        resolve("unicorn 🦄");
+        }, 250);
+    });
+};
+```
+
 
 
 
