@@ -38,6 +38,7 @@ module.exports = function shruglify(word) {
 	return word + ' ¯\_(ツ)_/¯';
 }
 ```
+-----
 
 ## Friday the 13th
 
@@ -45,7 +46,6 @@ Months That Begin on a Sunday will Always have a Friday the 13th
 
 Write a test for the function `isFridayTheThirteen`, it will assure that function returns `true` when passing `sunday` in it.
 
------
 
 ### Hints
 
@@ -80,6 +80,7 @@ module.exports = function isFridayTheThirteen(day) {
   return day === 'sunday';
 }
 ```
+-----
 
 ## Rocking with AVA
 
@@ -133,6 +134,7 @@ module.exports = function fancify(str, allcaps, char) {
   return '~' + char + '~' + str + '~' + char + '~';
 }
 ```
+-----
 
 ## Pizza time
 
