@@ -64,7 +64,7 @@ Or as alternatively:
 ```
 
 Here are some functions you can use with assert. 
-```
+```js
 assert.ok(value, message) // tests if value is truthy
 assert.equal(actual, expected, message) // ==
 assert.notEqual(actual, expected, message) // !=
