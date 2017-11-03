@@ -26,14 +26,14 @@ working?
 Maybe your first idea was calling the function with a value and `console.log`
 the result and then check its output in the console.
 
-```
+```js
 var shruglify = require('./shruglify.js');
 console.log(shruglify('hello world'));
 ```
 Try this yourself.
 
 **Function**
-```
+```js
 module.exports = function shruglify(word) {
 	return word + ' ¯\_(ツ)_/¯';
 }
@@ -53,13 +53,13 @@ The `console.log()` statement is very useful when we want to know what's going o
 
 Let's see how it works...
 
-```
+```js
   var assert = require('assert');
   assert(add(2,1) === 3,'add(2,1) should be 3');
 ```
 
 Or as alternatively:
-```
+```js
   assert.deepEqual(add(2,1), 3, 'add(2,1) should be 3');
 ```
 
@@ -75,7 +75,7 @@ assert.notStrictEqual(actual, expected, message) // !==
 ```
 
 **Function**
-```
+```js
 module.exports = function isFridayTheThirteen(day) {
   return day === 'sunday';
 }
@@ -96,7 +96,7 @@ The AVA structure is pretty simple. If we use ES6 especifications we can create 
 Let's start writing a test that always passes. You can do that using:
 
 ```js
-  t.pass()
+  t.pass();
 ```
 -----
 
@@ -115,20 +115,20 @@ Write tests that output `TAP`, that tests the following properties of a function
 
 Let's see a test example using AVA:
 
-```  
+``` js 
   test('test #1', t => {
     t.is(index.getName(), 'Andromeda', 'it Works');
   });
 ```
 
 Don't forget to get the source.
-```
+```js
   const test = require('ava');
 ```
 
 Here is a list of some assertions you can use with AVA. 
 
-```
+```js
 .pass([message]) //Passing assertion.
 .fail([message]) //Failing assertion.
 .truthy(value, [message]) //Assert that value is truthy.
@@ -145,7 +145,7 @@ Here is a list of some assertions you can use with AVA.
 - AVA documentation: https://www.npmjs.com/package/ava
 
 **Function**
-```
+```js
 module.exports = function fancify(str, allcaps, char) {
   if (allcaps) str = str.toUpperCase();
   char = char || '*';
@@ -172,7 +172,7 @@ If we need to finish with a test we can use:
 However there is maybe a better way to do this with callbacks using `t.plan(n)`.
 When we call this in the beginning we can tell `AVA` how many times we are going to run an assert.
 
-```
+```js
 test('nextTick', t => {
     t.plan(1);
     process.nextTick(function () {
@@ -184,14 +184,14 @@ test('nextTick', t => {
 In this example we only have one callback, which will simply pass the test when
 it is called. So we could have used `t.end()` within the callback instead like this.
 
-```
+```js
 test.cb('testing with a callback', t => {
 	callback('', t.end);
 });
 ```
 
 **Function**
-```
+```js
 module.exports = function pizzaMaker = (n, cb) => {
   if (n < 1) {
     return cb(null, true);
