@@ -7,7 +7,7 @@ A tutorial for write tests using AVA JS
 2. Create a project folder and run `npm init`
 3. Fill the package.json fields
 4. Run `npm install --save-dev ava`
-5. Run `ava --init` to add AVA to the package.js
+5. Run `ava --init` to add AVA to the package.json
 6. Create a file `index.js` 
 7. Create a folder called tests with a `.js` file inside.
 8. Create a script on your package.js `"test": "ava --verbose"
